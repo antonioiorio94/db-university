@@ -13,7 +13,17 @@ WHERE `degrees`.`department_id` = 7 AND `level` = 'magistrale';
 
 3)
 SELECT *
-        FROM `courses`
-        INNER JOIN `course_teacher`
-        ON `course_teacher`.`course_id` = `courses`.`id`
-        WHERE `course_teacher`.`teacher_id` = 44;
+FROM `courses`
+INNER JOIN `course_teacher`
+ON `course_teacher`.`course_id` = `courses`.`id`
+WHERE `course_teacher`.`teacher_id` = 44;
+
+4)
+
+SELECT *
+FROM `students`
+INNER JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+INNER JOIN `departments` 
+ON `degrees`.`department_id` = `departments`.`id`
+ORDER BY `students`.`surname`, `students`.`name`;
