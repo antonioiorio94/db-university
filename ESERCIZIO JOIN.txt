@@ -10,3 +10,10 @@ SELECT *
 FROM `degrees`
 INNER JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
 WHERE `degrees`.`department_id` = 7 AND `level` = 'magistrale';
+
+3)
+SELECT *
+        FROM `courses`
+        INNER JOIN `course_teacher`
+        ON `course_teacher`.`course_id` = `courses`.`id`
+        WHERE `course_teacher`.`teacher_id` = 44;
