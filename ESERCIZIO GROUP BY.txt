@@ -3,3 +3,10 @@ SELECT COUNT(*) AS `iscritti_per_anno`,
 YEAR(`enrolment_date`) AS `anno`
 FROM `students`
 GROUP BY(`anno`);
+
+
+2)
+
+SELECT COUNT(*) AS `insegnanti` , `office_address` AS `ufficio`
+FROM `teachers`
+GROUP BY `ufficio`;
